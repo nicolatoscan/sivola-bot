@@ -10,9 +10,9 @@ let message = 'No message';
 
 bot.start((ctx) => ctx.reply('Ciao, ti aggiorno su come vanno i posti'));
 bot.command('ping', (ctx) => ctx.reply('pong'));
-bot.command('posti', (ctx) => { 
-  console.log(ctx.chat.id)
-  ctx.reply(`messaggio: ${message}`)
+bot.command('posti', async (ctx) => { 
+  await check();
+  await ctx.reply(`messaggio: ${message}`)
 });
 
 
